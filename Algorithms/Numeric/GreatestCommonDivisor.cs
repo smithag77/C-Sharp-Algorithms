@@ -32,6 +32,18 @@ namespace Algorithms.Numeric
         }
 
         /// <summary>
+        /// Finds and returns the greatest common divisor of two numbers via recursion
+        /// </summary>
+        public static uint FindGCDRecursive(uint a, uint b)
+        {
+            if (a % b == 0)
+            {
+                return b;
+            }
+            return FindGCDRecursive(b, a % b);
+        }
+
+        /// <summary>
         /// Determines given two numbers are relatively prime
         /// </summary>
         public static bool IsRelativelyPrime(uint a, uint b)
